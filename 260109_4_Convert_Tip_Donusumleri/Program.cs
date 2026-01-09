@@ -57,6 +57,7 @@
             //metinsel
             string metin1 = Convert.ToString(12);
             char metin2 = Convert.ToChar(Console.ReadLine());
+            //test
 
         }
     }
