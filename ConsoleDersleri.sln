@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260113_1_Parse_Tip_Donusumu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260113_2_Cast_Tip_Donusumu", "260113_2_Cast_Tip_Donusumu\260113_2_Cast_Tip_Donusumu.csproj", "{D5E835AB-9D61-4365-867E-D3354EA9629A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260113_3_ToString_Tip_Donusumu", "260113_3_ToString_Tip_Donusumu\260113_3_ToString_Tip_Donusumu.csproj", "{B23EDBA9-DE5F-4E23-944E-CB71444CB9A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{D5E835AB-9D61-4365-867E-D3354EA9629A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5E835AB-9D61-4365-867E-D3354EA9629A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5E835AB-9D61-4365-867E-D3354EA9629A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B23EDBA9-DE5F-4E23-944E-CB71444CB9A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B23EDBA9-DE5F-4E23-944E-CB71444CB9A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B23EDBA9-DE5F-4E23-944E-CB71444CB9A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B23EDBA9-DE5F-4E23-944E-CB71444CB9A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{B348D2AA-FADA-4F90-9C06-801AE179D866} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{C73A0FC0-EE1F-4BC0-BA6F-9CAE545697F9} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{D5E835AB-9D61-4365-867E-D3354EA9629A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{B23EDBA9-DE5F-4E23-944E-CB71444CB9A6} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6A285FF-C316-4890-8B35-65A55DFED84E}
