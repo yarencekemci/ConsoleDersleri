@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36616.10 d17.14
+VisualStudioVersion = 17.14.36616.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Konu2_TipDonusumleri", "Konu2_TipDonusumleri", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Konu3_Operatorler", "Konu3_Operatorler", "{FA817CA0-546F-435B-B1BD-273A348A6469}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260109_4_Convert_Tip_Donusumleri", "260109_4_Convert_Tip_Donusumleri\260109_4_Convert_Tip_Donusumleri.csproj", "{B348D2AA-FADA-4F90-9C06-801AE179D866}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260113_1_Parse_Tip_Donusumu", "260113_1_Parse_Tip_Donusumu\260113_1_Parse_Tip_Donusumu.csproj", "{C73A0FC0-EE1F-4BC0-BA6F-9CAE545697F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +21,17 @@ Global
 		{B348D2AA-FADA-4F90-9C06-801AE179D866}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B348D2AA-FADA-4F90-9C06-801AE179D866}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B348D2AA-FADA-4F90-9C06-801AE179D866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C73A0FC0-EE1F-4BC0-BA6F-9CAE545697F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C73A0FC0-EE1F-4BC0-BA6F-9CAE545697F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C73A0FC0-EE1F-4BC0-BA6F-9CAE545697F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C73A0FC0-EE1F-4BC0-BA6F-9CAE545697F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B348D2AA-FADA-4F90-9C06-801AE179D866} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{C73A0FC0-EE1F-4BC0-BA6F-9CAE545697F9} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6A285FF-C316-4890-8B35-65A55DFED84E}
