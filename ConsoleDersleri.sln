@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260113_4_Ornek", "260113_4_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "261301_Odevler", "261301_Odevler\261301_Odevler.csproj", "{772809D9-90C0-4E53-8D5E-3F3954634CD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260115_2_Karsilastirma_Operatorleri", "260115_2_Karsilastirma_Operatorleri\260115_2_Karsilastirma_Operatorleri.csproj", "{52DC4D60-E6C9-4A37-B3D4-0AFBA43A29DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{772809D9-90C0-4E53-8D5E-3F3954634CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{772809D9-90C0-4E53-8D5E-3F3954634CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{772809D9-90C0-4E53-8D5E-3F3954634CD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52DC4D60-E6C9-4A37-B3D4-0AFBA43A29DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52DC4D60-E6C9-4A37-B3D4-0AFBA43A29DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52DC4D60-E6C9-4A37-B3D4-0AFBA43A29DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52DC4D60-E6C9-4A37-B3D4-0AFBA43A29DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{B23EDBA9-DE5F-4E23-944E-CB71444CB9A6} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{53D95003-C0D1-4FF2-A3B1-FC1D9C2716C4} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{772809D9-90C0-4E53-8D5E-3F3954634CD7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{52DC4D60-E6C9-4A37-B3D4-0AFBA43A29DC} = {FA817CA0-546F-435B-B1BD-273A348A6469}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6A285FF-C316-4890-8B35-65A55DFED84E}

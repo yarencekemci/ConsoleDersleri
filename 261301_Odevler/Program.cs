@@ -61,10 +61,10 @@
             Console.Write("4. sayi griniz: ");
             string s4 = Console.ReadLine();
 
-            int sayi1 = int.Parse(s1);
-            int sayi2 = int.Parse(s2);
-            int sayi3 = int.Parse(s3);
-            int sayi4 = int.Parse(s4);
+            //int sayi1 = int.Parse(s1);
+            //int sayi2 = int.Parse(s2);
+            //int sayi3 = int.Parse(s3);
+            //int sayi4 = int.Parse(s4);
 
             int sonuc = (sayi1 + sayi2) * sayi3 / sayi4;
             Console.WriteLine("sonuç:" + sonuc);
@@ -96,7 +96,7 @@
             Console.Write("4. sayi: ");
             double ss4 = double.Parse(Console.ReadLine());
 
-            double sonuc = ((ss1 * ss2) + ss3) / ss4
+             //sonuc = (ss1 * ss2) + ss3) / ss4;
 
             Console.Write("Sonuç: " + sonuc);
         }
