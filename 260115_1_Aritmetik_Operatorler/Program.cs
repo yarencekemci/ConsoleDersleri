@@ -26,6 +26,7 @@
             Console.WriteLine("Bolme: " + bol);
             Console.WriteLine("Carpma: " + carp);
             Console.WriteLine("Mod Alma: " + modAl);
+            //
 
         }
 
