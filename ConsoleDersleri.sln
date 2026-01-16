@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260115_3_Mantiksal_Operator
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260115_14_Ornek_Operatorler", "260115_14_Ornek_Operatorler\260115_14_Ornek_Operatorler.csproj", "{92EB42CD-5B17-47C9-8894-CDCAADE81BEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260115_4_Ornek_Operatorler", "260115_4_Ornek_Operatorler\260115_4_Ornek_Operatorler.csproj", "{377BCDBE-6DEF-4B75-93D5-D336D112CD82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{92EB42CD-5B17-47C9-8894-CDCAADE81BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92EB42CD-5B17-47C9-8894-CDCAADE81BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92EB42CD-5B17-47C9-8894-CDCAADE81BEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{377BCDBE-6DEF-4B75-93D5-D336D112CD82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{377BCDBE-6DEF-4B75-93D5-D336D112CD82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{377BCDBE-6DEF-4B75-93D5-D336D112CD82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{377BCDBE-6DEF-4B75-93D5-D336D112CD82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +87,7 @@ Global
 		{52DC4D60-E6C9-4A37-B3D4-0AFBA43A29DC} = {FA817CA0-546F-435B-B1BD-273A348A6469}
 		{9CF55E7F-B5DE-46FE-8807-C7E0652D765D} = {FA817CA0-546F-435B-B1BD-273A348A6469}
 		{92EB42CD-5B17-47C9-8894-CDCAADE81BEB} = {FA817CA0-546F-435B-B1BD-273A348A6469}
+		{377BCDBE-6DEF-4B75-93D5-D336D112CD82} = {FA817CA0-546F-435B-B1BD-273A348A6469}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6A285FF-C316-4890-8B35-65A55DFED84E}
