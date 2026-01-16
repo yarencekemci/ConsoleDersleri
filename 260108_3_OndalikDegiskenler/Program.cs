@@ -3,7 +3,7 @@
     internal class Program
     {
         static void Main(string[] args)
-        {
+        { 
             //Ondalık sayılar için tipler float, double,decimal
             float floatSayi1 = 45.45f; //DI kütüphaneleri yani çizim için kullanılan tiptir 
             //float için ondalık yazılırsa sonda f ister
