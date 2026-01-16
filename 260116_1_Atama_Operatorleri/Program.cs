@@ -64,8 +64,32 @@
             //int deger3 = deger2++ +10; //ilkin deger2 değeri deger3 e eşitlenir sonra ++ işlemi deger2 ye uygulanır
             int deger3 = ++deger2 + 10; // deger2 nin degeri 1 arttirilir ve 10 ile toplanarak deger 3 e atanır. deger artimi yapilarak eşitleme yapilir
             Console.WriteLine("deger3 icin: "+deger3);
-           
 
+            //------
+            // TOPLAMA VE ÇARPMA İŞLEMİ YAPILIYORSA PARANTEZ İÇİNE ALINIR YOKSA STRİNG BİR İFADE OLARAK ALGILAR
+            int s1 = 10;
+            int s2 = 20;
+            int toplam = s1 + s2;
+            Console.WriteLine("hesaplanan toplam: "+toplam);
+            Console.WriteLine("string toplam: " + +s1+s2); //1020
+            Console.WriteLine("parantez toplam: " + (s1+s2)); //30
+            Console.WriteLine("carpim: " + s1*s2);
+            Console.WriteLine("parantez fark: " + (s1-s2));
+            Console.WriteLine("bolme: " + s1 / s2);
+            Console.WriteLine("mod alma: "+ s1% s2);
+            Console.WriteLine("----------");
+            Console.WriteLine(s1+s2); // 30 olacaktır, önünde herhangi bir string ifade olmadığı için toplar
+            Console.WriteLine(""+s1+s2); //1020 olacaktır. + işleminden önce "" var.
+            // -----------------------
+            // BÖLME İŞLEMİ İÇİN BAZI NOTLAR
+            // 10/2=5 10 2'nin katıdır
+            //14125-> 2,3,5,11,53
+            int kat1 = 14125;
+            Console.WriteLine("14125,2nin katı mı?: "+kat1%2);
+            Console.WriteLine("14125,3ün katı mı?: " + kat1 % 3);
+            Console.WriteLine("14125,5in katı mı?: " + kat1 % 5);
+            Console.WriteLine("14125,11in katı mı?: " + kat1 % 11);
+            Console.WriteLine("14125,53ün katı mı?: " + kat1 % 53);
 
         }
     }
