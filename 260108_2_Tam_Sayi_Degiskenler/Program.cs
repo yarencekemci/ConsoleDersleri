@@ -5,7 +5,7 @@ namespace _260108_2_Tam_Sayi_Degiskenler
     internal class Program
     {
         static void Main(string[] args)
-        {
+        { 
             //değişken nedir?
             byte yas = 35; //0-255 arası
             short yil = 2026; 
