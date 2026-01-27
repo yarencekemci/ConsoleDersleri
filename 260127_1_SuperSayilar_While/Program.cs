@@ -22,6 +22,7 @@ namespace _260127_1_SuperSayilar_While
                         toplam = toplam + bolenSayi; 
                     }
                     bolenSayi++;
+                    
                 }
                 
                 if (toplam == sayi)
@@ -30,6 +31,7 @@ namespace _260127_1_SuperSayilar_While
                 }
                 sayi++;
             }
+            Console.ReadLine();
             
             
 
