@@ -18,19 +18,19 @@
                 if (i % 11 == 0)
                 {
                     adet11++;
-                    toplam11 += 1;
+                    toplam11 += i;
                 }
                 
                 
                 if (i % 13 == 0)
                 {
                     adet13++;
-                    toplam13 += 1;
+                    toplam13 += i;
                 }
 
+            }
                 Console.WriteLine("11'in katlari sayisi:{0} ve toplami:{1} ",adet11,toplam11);
                 Console.WriteLine("13'in katlari sayisi:{0} ve toplami:{1} ", adet13, toplam13);
-            }
 
         }
     }
