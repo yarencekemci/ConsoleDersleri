@@ -32,16 +32,16 @@
             }
             // Kullanıcıdan alınan 5 sayıyı bir diziye ata ve toplamını ekrana yazdır.
 
-            int[] sayilar = new int[5];
-            int toplam = 0;
+            int[] sayilarx = new int[5];
+            int toplamy = 0;
 
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine($"{i + 1}. sayiyi giriniz.");
-                sayilar[i] = int.Parse(Console.ReadLine());
-                toplam += sayilar[i];
+                sayilarx[i] = int.Parse(Console.ReadLine());
+                toplamy += sayilarx[i];
             }
-            Console.WriteLine("toplam: " + toplam);
+            Console.WriteLine("toplam: " + toplamy);
 
             // Bir dizideki sayıların ortalamasını bulan programı yaz. 
             // dizideki sayıyı program verecek
