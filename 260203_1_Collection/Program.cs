@@ -42,10 +42,12 @@ namespace _260203_1_Collection
             Console.WriteLine("index no: "+ arrayList.IndexOf("Yaren"));
             Console.WriteLine("index no: " + arrayList.IndexOf(25.5m));
             Console.WriteLine("45 elemanı var ama: " + arrayList.Contains(45));
+            Console.WriteLine("----array list elemanları-----");
             if (arrayList.Contains(45))
             {
                 Console.WriteLine("Index numarası: "+ arrayList.IndexOf(45));
             }
+            Console.WriteLine("array list kopya devam");
             //ArrayList kopyalamak
             //ArrayList newList = (ArrayList)arrayList.Clone();
 
@@ -55,7 +57,61 @@ namespace _260203_1_Collection
             {
                 Console.Write(newList[i]+",");
             }*/
-            
+            ArrayList newArrayList = new ArrayList(arrayList); //arraylist elemanlarını newArraylist içine kopyalar newArrayList içine kopyalar/atar
+            for (int i = 0; i < newArrayList.Count; i++)
+            {
+                Console.WriteLine(newArrayList[i]);
+            }
+            Console.WriteLine("--- yeni kopya arraylist");
+            arrayList.Add("Clone işlemi");
+            ArrayList newCopyList = (ArrayList)arrayList.Clone(); //ArrayList bu işlemle newCopyList e kopyalanır
+            //(ArrayList) işlemi class düzeyinde bir cast(tip dönüşümü) işlemidir.
+            for (int i = 0; i < newCopyList.Count; i++)
+            {
+                Console.WriteLine(newCopyList[i]);
+            }
+            //------------
+            Console.WriteLine("---Dongu ile ekleme----");
+            ArrayList arrayListDongu = new ArrayList();
+            for (int i = 0; i < arrayList.Count; i++)
+            {
+                Console.WriteLine(i+1+". eleman type: "+ arrayList[i].GetType());
+                arrayListDongu.Add(arrayList[i]);
+                Console.WriteLine(arrayListDongu[i]);
+            }
+           
+            //----------
+            Console.WriteLine("----sayilar ArrayList----");
+            sayilar.Reverse();//elemanları index numarasına göre ters çevirir
+            for (int i = 0; i < sayilar.Count; i++)
+            {
+                Console.WriteLine(sayilar[i]);
+            }
+            // ArrayList için CopyTo işlemi
+            Console.WriteLine("--- copy to işlemi ----");
+            string[] sehirler = new string[12];
+            sehirler[0] = "İzmir";
+            sehirler[1] = "Mardin";
+            sehirler[2] = "Zonguldak";
+            sehirler[3] = "Muğla";
+            sehirler[4] = "Diyarbakır";
+            sehirler[5] = "Iğdır";
+
+            ArrayList city = new ArrayList();
+            city.Add("Adana");
+            city.Add("Kars");
+            city.Add("Afyon");
+            city.Add("Trabzon");
+            city.Add("Mersin");
+            city.Add("Malatya");
+
+            //city.CopyTo(cityIndex,kopyalanacak Collection/Dizi,üzerine yazılacak Index, başlangıç değeri)
+            city.CopyTo(1, sehirler, 9, 1);
+            city.CopyTo(4, sehirler, 11, 1);
+            for (int i = 0; i < sehirler.Count(); i++)
+            {
+                Console.WriteLine(i+".index: "+ sehirler[i]);
+            }
         }
     }
 }
