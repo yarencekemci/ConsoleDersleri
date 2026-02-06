@@ -123,6 +123,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260206_1_Method_Tanim", "26
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260206_2_Deger_Dondurmeyen_Method", "260206_2_Deger_Dondurmeyen_Method\260206_2_Deger_Dondurmeyen_Method.csproj", "{0B9FDA2F-A98C-4DBF-9B07-131C596EDDA1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260206_3_Deger_Donduren_Method", "260206_3_Deger_Donduren_Method\260206_3_Deger_Donduren_Method.csproj", "{61749FD2-DAA3-4E2C-8A4A-8B5350A07376}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -341,6 +343,10 @@ Global
 		{0B9FDA2F-A98C-4DBF-9B07-131C596EDDA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B9FDA2F-A98C-4DBF-9B07-131C596EDDA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B9FDA2F-A98C-4DBF-9B07-131C596EDDA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61749FD2-DAA3-4E2C-8A4A-8B5350A07376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61749FD2-DAA3-4E2C-8A4A-8B5350A07376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61749FD2-DAA3-4E2C-8A4A-8B5350A07376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61749FD2-DAA3-4E2C-8A4A-8B5350A07376}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -399,6 +405,7 @@ Global
 		{AFD8B2F3-5CF4-45D1-BB56-F00E226720AA} = {D56B4D6C-3051-414C-8800-9D49AE11647C}
 		{A9DCF18F-B44F-439F-B95B-54630A3CAE48} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 		{0B9FDA2F-A98C-4DBF-9B07-131C596EDDA1} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
+		{61749FD2-DAA3-4E2C-8A4A-8B5350A07376} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6A285FF-C316-4890-8B35-65A55DFED84E}
