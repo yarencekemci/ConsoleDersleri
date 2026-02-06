@@ -121,6 +121,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260203_1_Array_List", "2602
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260206_1_Method_Tanim", "260206_1_Method_Tanim\260206_1_Method_Tanim.csproj", "{A9DCF18F-B44F-439F-B95B-54630A3CAE48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260206_2_Deger_Dondurmeyen_Method", "260206_2_Deger_Dondurmeyen_Method\260206_2_Deger_Dondurmeyen_Method.csproj", "{0B9FDA2F-A98C-4DBF-9B07-131C596EDDA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -335,6 +337,10 @@ Global
 		{A9DCF18F-B44F-439F-B95B-54630A3CAE48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9DCF18F-B44F-439F-B95B-54630A3CAE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9DCF18F-B44F-439F-B95B-54630A3CAE48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B9FDA2F-A98C-4DBF-9B07-131C596EDDA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B9FDA2F-A98C-4DBF-9B07-131C596EDDA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B9FDA2F-A98C-4DBF-9B07-131C596EDDA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B9FDA2F-A98C-4DBF-9B07-131C596EDDA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -392,6 +398,7 @@ Global
 		{C8F77317-D699-496B-861C-588933D25354} = {D56B4D6C-3051-414C-8800-9D49AE11647C}
 		{AFD8B2F3-5CF4-45D1-BB56-F00E226720AA} = {D56B4D6C-3051-414C-8800-9D49AE11647C}
 		{A9DCF18F-B44F-439F-B95B-54630A3CAE48} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
+		{0B9FDA2F-A98C-4DBF-9B07-131C596EDDA1} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6A285FF-C316-4890-8B35-65A55DFED84E}
