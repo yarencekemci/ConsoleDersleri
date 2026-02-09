@@ -69,7 +69,18 @@ namespace _260205_3_Collection_Ornek
             }
 
             // BU SORU İCİN EGER 2 DEN FAZLA KİSİ KARTI İSTENSEYDİ NASIL BİR YOL İZLENİRDİ?
+            //Console.WriteLine("kullanicilar");
+            /*for (int j = 0; j< kartItem.Count; j++)
+            {
+                ArrayList kart = (ArrayList)kartItem[j];
 
+                for (int i = 0; i<kartItem.Length; i++)
+                {
+                    if (kart[i].ToString()=="1")
+                        Console.WriteLine("Medeni durum bekar");
+                    else Console.WriteLine(kart[i]+":"+kartItem[i]);
+                }
+            }*/
 
         }
     }
