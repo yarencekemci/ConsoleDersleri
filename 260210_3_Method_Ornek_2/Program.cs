@@ -9,6 +9,10 @@
             int sayi1 = Sayi();
             int sayi2 = Sayi();
             int sayi3 = Sayi();
+            Siralama(sayi1, sayi2, sayi3);
+            Siralama(sayi2,sayi1,sayi3);
+            Siralama(sayi3, sayi1, sayi2);
+            
 
             Sirala(sayi1,sayi2,sayi3);
           //  EkranaYaz("Uc sayinin siralamasi: " );
