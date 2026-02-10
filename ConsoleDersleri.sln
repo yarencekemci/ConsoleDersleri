@@ -127,6 +127,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260206_3_Deger_Donduren_Met
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260206_4_Method_Ornekler", "260206_4_Method_Ornekler\260206_4_Method_Ornekler.csproj", "{66D6AC43-C684-40DF-8ABB-63553408292C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260210_1_Collection_Example", "260210_1_Collection_Example\260210_1_Collection_Example.csproj", "{CA80E5A3-410C-457F-B8E1-43C8DC7D5463}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -353,6 +355,10 @@ Global
 		{66D6AC43-C684-40DF-8ABB-63553408292C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66D6AC43-C684-40DF-8ABB-63553408292C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66D6AC43-C684-40DF-8ABB-63553408292C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA80E5A3-410C-457F-B8E1-43C8DC7D5463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA80E5A3-410C-457F-B8E1-43C8DC7D5463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA80E5A3-410C-457F-B8E1-43C8DC7D5463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA80E5A3-410C-457F-B8E1-43C8DC7D5463}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -413,6 +419,7 @@ Global
 		{0B9FDA2F-A98C-4DBF-9B07-131C596EDDA1} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 		{61749FD2-DAA3-4E2C-8A4A-8B5350A07376} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 		{66D6AC43-C684-40DF-8ABB-63553408292C} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
+		{CA80E5A3-410C-457F-B8E1-43C8DC7D5463} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6A285FF-C316-4890-8B35-65A55DFED84E}
