@@ -139,6 +139,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260212_2_Method_ElektrikFat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260212_2_Method_ElektrikFaturasi_Cozumhoca", "260212_2_Method_ElektrikFaturasi_Cozumhoca\260212_2_Method_ElektrikFaturasi_Cozumhoca.csproj", "{AECA8DE2-E175-42D2-95F2-ACFCA60D054B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260212_3_Method_EmekliSorusu", "260212_3_Method_EmekliSorusu\260212_3_Method_EmekliSorusu.csproj", "{514ACE10-66D6-44D8-847C-6B1CAE89D64F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -389,6 +391,10 @@ Global
 		{AECA8DE2-E175-42D2-95F2-ACFCA60D054B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AECA8DE2-E175-42D2-95F2-ACFCA60D054B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AECA8DE2-E175-42D2-95F2-ACFCA60D054B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{514ACE10-66D6-44D8-847C-6B1CAE89D64F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{514ACE10-66D6-44D8-847C-6B1CAE89D64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{514ACE10-66D6-44D8-847C-6B1CAE89D64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{514ACE10-66D6-44D8-847C-6B1CAE89D64F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -455,6 +461,7 @@ Global
 		{70FEAAB0-E2F5-4820-8F22-BA2E909FAD89} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 		{3F4C369F-5090-4730-B7A6-09E5901DC3B1} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 		{AECA8DE2-E175-42D2-95F2-ACFCA60D054B} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
+		{514ACE10-66D6-44D8-847C-6B1CAE89D64F} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6A285FF-C316-4890-8B35-65A55DFED84E}
