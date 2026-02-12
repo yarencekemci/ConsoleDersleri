@@ -135,6 +135,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260210_3_Method_Ornek_2", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260212_1_MethodOrnek", "260212_1_MethodOrnek\260212_1_MethodOrnek.csproj", "{70FEAAB0-E2F5-4820-8F22-BA2E909FAD89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260212_2_Method_ElektrikFaturasi_Ornek", "260212_2_Method_ElektrikFaturasi_Ornek\260212_2_Method_ElektrikFaturasi_Ornek.csproj", "{3F4C369F-5090-4730-B7A6-09E5901DC3B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260212_2_Method_ElektrikFaturasi_Cozumhoca", "260212_2_Method_ElektrikFaturasi_Cozumhoca\260212_2_Method_ElektrikFaturasi_Cozumhoca.csproj", "{AECA8DE2-E175-42D2-95F2-ACFCA60D054B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -377,6 +381,14 @@ Global
 		{70FEAAB0-E2F5-4820-8F22-BA2E909FAD89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70FEAAB0-E2F5-4820-8F22-BA2E909FAD89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70FEAAB0-E2F5-4820-8F22-BA2E909FAD89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F4C369F-5090-4730-B7A6-09E5901DC3B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F4C369F-5090-4730-B7A6-09E5901DC3B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F4C369F-5090-4730-B7A6-09E5901DC3B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F4C369F-5090-4730-B7A6-09E5901DC3B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AECA8DE2-E175-42D2-95F2-ACFCA60D054B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AECA8DE2-E175-42D2-95F2-ACFCA60D054B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AECA8DE2-E175-42D2-95F2-ACFCA60D054B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AECA8DE2-E175-42D2-95F2-ACFCA60D054B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -441,6 +453,8 @@ Global
 		{BED6E2DF-D1E3-4AD1-A087-EFFA83DE2B2B} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 		{E84B28F6-EC26-4308-B75A-EC1D078B12CD} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 		{70FEAAB0-E2F5-4820-8F22-BA2E909FAD89} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
+		{3F4C369F-5090-4730-B7A6-09E5901DC3B1} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
+		{AECA8DE2-E175-42D2-95F2-ACFCA60D054B} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6A285FF-C316-4890-8B35-65A55DFED84E}
