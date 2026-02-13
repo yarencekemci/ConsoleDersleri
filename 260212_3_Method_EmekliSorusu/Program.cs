@@ -24,54 +24,73 @@ namespace _260212_3_Method_EmekliSorusu
 
         static void Emeklilik()
         {
-            string cinsiyet = "cinsiyet";
-            switch (cinsiyet)
+            while (true)
             {
-                
-            
-                double maas = 0;
-                double ikramiye = 0;
-                case "kadın":
-                    EkranaYaz("yas giriniz: ");
-                    YasHesapla();
-                    EkranaYaz("prim gün sayisi: ");
-                    PrimHesapla();
-                    Oku();
-                    if (YasHesapla =>60 && PrimHesapla = 7300)
-                    {
-                        ikramiye = maas * 13;
-                        Console.WriteLine("İkramiyeniz: " + ikramiye);
-                    }
-                    break;
-                case "erkek":
-                    EkranaYaz("yas giriniz: ");
-                    YasHesapla();
-                    EkranaYaz("prim gün sayisi: ");
-                    PrimHesapla();
-                    Oku();
+                Console.Write("cinsiyet giriniz (-kadın/erkek- yazınız): ");
+                string cinsiyet = Console.ReadLine();
 
-                    break;
+                if (cinsiyet != "kadın" && cinsiyet != "erkek")
+                {
+                    Console.WriteLine("hatalı cinsiyet girdiniz!!!!");
+                    continue;
+                }
+
+                int yas = YasHesapla();
+                int prim = PrimHesapla();
+
+                Console.Write("maas giriniz: ");
+                double maas = Convert.ToDouble(Console.ReadLine());
+
+                switch (cinsiyet)
+                {
+                    case "kadın":
+                        if (yas >= 60 && prim >= 7300)
+                        {
+                            double ikramiye = maas * 15;
+                            Console.WriteLine($"Emekli oldunuz. İkramiyeniz: {ikramiye}");
+                        }
+                        else
+                        {
+                            EmekliDegil(yas, prim, 60, 7300);
+                        }
+                        break;
+
+                    case "erkek":
+                        if (yas >= 65 && prim >= 8500)
+                        {
+                            double ikramiye = maas * 17.5;
+                            Console.WriteLine($"Emekli oldunuz. İkramiyeniz: {ikramiye}");
+                        }
+                        else
+                        {
+                            EmekliDegil(yas, prim, 65, 8500);
+                        }
+                        break;
+                }
             }
-
         }
+
         static int YasHesapla()
         {
-            Console.WriteLine("yas giriniz");
+            Console.Write("yas giriniz: ");
             return Convert.ToInt32(Console.ReadLine());
-        }
-        static int PrimHesapla()
-        {
-            Console.WriteLine("prim gün: ");
-            return Convert.ToInt32(Console.ReadLine());
-        }
-        static int Oku()
-        {
-            return Convert.ToInt32(Console.ReadLine());
-        }
-        static void EkranaYaz(string metin)
-        {
-            Console.WriteLine(metin);
         }
 
+        static int PrimHesapla()
+        {
+            Console.Write("prim gün sayısını giriniz: ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
+        static void EmekliDegil(int yas, int prim, int gerekenYas, int gerekenPrim)
+        {
+            if (yas < gerekenYas)
+                Console.WriteLine($"yas uymuyor. gerekli yaş: {gerekenYas}");
+
+            if (prim < gerekenPrim)
+                Console.WriteLine($"prim gün uymuyor. gerekli prim: {gerekenPrim}");
+        }
     }
 }
+
+    
