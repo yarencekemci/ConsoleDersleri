@@ -143,6 +143,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260212_3_Method_EmekliSorus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260215_1_Overload_method", "260215_1_Overload_method\260215_1_Overload_method.csproj", "{8C09B26F-F60F-46CC-8334-CDDC3ACB71D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260215_2_Overload_Ornek1", "260215_2_Overload_Ornek1\260215_2_Overload_Ornek1.csproj", "{368F9A14-BD77-4B1B-B8EB-C1A5705B949A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -401,6 +403,10 @@ Global
 		{8C09B26F-F60F-46CC-8334-CDDC3ACB71D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C09B26F-F60F-46CC-8334-CDDC3ACB71D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C09B26F-F60F-46CC-8334-CDDC3ACB71D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{368F9A14-BD77-4B1B-B8EB-C1A5705B949A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{368F9A14-BD77-4B1B-B8EB-C1A5705B949A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{368F9A14-BD77-4B1B-B8EB-C1A5705B949A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{368F9A14-BD77-4B1B-B8EB-C1A5705B949A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -469,6 +475,7 @@ Global
 		{AECA8DE2-E175-42D2-95F2-ACFCA60D054B} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 		{514ACE10-66D6-44D8-847C-6B1CAE89D64F} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 		{8C09B26F-F60F-46CC-8334-CDDC3ACB71D0} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
+		{368F9A14-BD77-4B1B-B8EB-C1A5705B949A} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6A285FF-C316-4890-8B35-65A55DFED84E}
