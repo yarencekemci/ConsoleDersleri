@@ -145,6 +145,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260215_1_Overload_method", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260215_2_Overload_Ornek1", "260215_2_Overload_Ornek1\260215_2_Overload_Ornek1.csproj", "{368F9A14-BD77-4B1B-B8EB-C1A5705B949A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Konu8_Bitirme_Projesi", "Konu8_Bitirme_Projesi", "{2A699EBE-EBDE-4F35-B3AD-1173986EBC15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "260215_3_Bankamatik_Proje", "260215_3_Bankamatik_Proje\260215_3_Bankamatik_Proje.csproj", "{8BDF70CA-CC38-4E88-AA3C-8BA0367FDEA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -407,6 +411,10 @@ Global
 		{368F9A14-BD77-4B1B-B8EB-C1A5705B949A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{368F9A14-BD77-4B1B-B8EB-C1A5705B949A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{368F9A14-BD77-4B1B-B8EB-C1A5705B949A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BDF70CA-CC38-4E88-AA3C-8BA0367FDEA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BDF70CA-CC38-4E88-AA3C-8BA0367FDEA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BDF70CA-CC38-4E88-AA3C-8BA0367FDEA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BDF70CA-CC38-4E88-AA3C-8BA0367FDEA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -476,6 +484,7 @@ Global
 		{514ACE10-66D6-44D8-847C-6B1CAE89D64F} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 		{8C09B26F-F60F-46CC-8334-CDDC3ACB71D0} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
 		{368F9A14-BD77-4B1B-B8EB-C1A5705B949A} = {0C086FCC-6ECB-4F1B-8E47-1083839C9519}
+		{8BDF70CA-CC38-4E88-AA3C-8BA0367FDEA2} = {2A699EBE-EBDE-4F35-B3AD-1173986EBC15}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6A285FF-C316-4890-8B35-65A55DFED84E}
