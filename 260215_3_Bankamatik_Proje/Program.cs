@@ -177,9 +177,36 @@
 
                 if (kartNo.Length < 12)
                 {
-                    Console.WriteLine("12 haneden az kart numarası giremezsiniz. Geçersiz!"
+                    Console.WriteLine("12 haneden az kart numarası giremezsiniz. Geçersiz!"); //Geçersiz kart girişi yaptığında menüye dönsün
+                    Console.Write("---Menüye dönüyorsunuz---");
+                    MenuSecenek();
+                    return;
                 }
+                Console.Write("Yatırmak istediginiz tutar: ");
+                decimal tutar = decimal.Parse(Console.ReadLine());
+
+                if (tutar > bakiye)
+                {
+                    Console.WriteLine("Yetersiz bakiye!");
+
+                }
+                else
+                {
+                    bakiye = bakiye - tutar;
+                    Console.WriteLine("Para çekme işlemi başarılı");
+                    Console.WriteLine("YENİ BAKİYENİZ: " + bakiye + "TL");
+                }
+                MenuSecenek();
+
+                //kendi hesabına para yatırma ParaYatir();
+                //para transfer menüsü ParaTransfer();
+                //Eğitim Ödemeleri 
+                //ödemeler havale işlemleri Odemeler();
+                //bilgi güncelleme BilgiGuncelleme();
+                //MenuSecenek 9-Ana Menü 0-Çıkış işlemi
+
             }
+
 
 
         }
