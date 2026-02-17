@@ -1,4 +1,6 @@
-﻿namespace _260215_3_Bankamatik_Proje
+﻿using System.Collections.Concurrent;
+
+namespace _260215_3_Bankamatik_Proje
 {
     internal class Program
     {
@@ -110,7 +112,7 @@
             }
             else if (secim == "0")
             {
-                Cikis();
+                Cikis(); //Menu Secenekleri 0-Çıkış 
             }
             else
             {
@@ -198,12 +200,109 @@
                 }
                 MenuSecenek();
 
-                //kendi hesabına para yatırma ParaYatir();
-                //para transfer menüsü ParaTransfer();
-                //Eğitim Ödemeleri 
-                //ödemeler havale işlemleri Odemeler();
-                //bilgi güncelleme BilgiGuncelleme();
+                //kendi hesabına para yatırma //ParaYatir();
+                //para transfer menüsü //ParaTransfer();
+                //Eğitim Ödemeleri //ARIZALI
+                static void EgitimOdemeleri()
+                {
+                    Console.WriteLine("--Eğitim Ödemeleri--");
+                    Console.WriteLine("Bu sayfa bakım asamasındadır.");
+
+                    MenuSecenek();
+                }
+                //ödemeler -Faturalar - OGS //Odemeler();
+                Console.WriteLine("ODEMELER");
+                Console.WriteLine("1 - Elektrik Faturası");
+                Console.WriteLine("2 - Telefon Faturası");
+                Console.WriteLine("3 - İnternet Faturası");
+                Console.WriteLine("4 - Su Faturası");
+                Console.WriteLine("5 - OGS Ödemeleri");
+                Console.WriteLine("9 - Ana Menü");
+                Console.WriteLine("0 - Çıkış");
+                Console.WriteLine("Lütfen yapmak istediginiz islemi seciniz.");
+
+                string secim = Console.ReadLine();
+
+
+                //bilgi güncelleme //BilgiGuncelleme();
+                static void BilgiGuncelleme()
+                {
+                    Console.WriteLine("---Bilgi Güncelleme İşlemi---");
+                    Console.WriteLine("1 - Şifre Değiştir");
+                    Console.WriteLine("9 - Ana Menü");
+                    Console.WriteLine("0 - Çıkış");
+                    Console.WriteLine("Lütfen yapmak istediginiz islemi seciniz");
+
+                    string secim = Console.ReadLine();
+
+                    if (secim == "1")
+                        SifreDegistir(); // şifre değiştirme işlemi ayrı bir method yazılacak
+                    else if (secim == "9")
+                        AnaMenu();
+                    else if (secim == "0")
+                        Cikis();
+                    else
+                    {
+                        Console.WriteLine("Hatali Secim. Tekrar yonlendiriliyorsunuz");
+                        BilgiGuncelleme();
+                    }
+
+                }
+                // SifreDegistir();
+                static void SifreDegistir()
+                {
+                    Console.WriteLine("Sifre Degistirme İslemi");
+                    Console.WriteLine("Mevcut Sifrenizi giriniz");
+
+                    string mevcutSifre = Console.ReadLine();
+
+                    if (mevcutSifre != sifre)
+                    { 
+                        Console.WriteLine("Yanlıs sifre");
+                        MenuSecenek();
+                        return;
+                    }
+                    Console.WriteLine("Yeni şifrenizi giriniz: ");
+                    string yeniSifre = Console.ReadLine();
+
+                    
+
+                    sifre = yeniSifre;
+                    Console.WriteLine("sifre degistirildi");
+                }
+
+
                 //MenuSecenek 9-Ana Menü 0-Çıkış işlemi
+                static void MenuSecenek()
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("9 - Ana Menü");
+                    Console.WriteLine("0 - Çıkış İşlemleri");
+                    Console.Write("Seçiminiz");
+
+                    string secim = Console.ReadLine();
+
+                    if (secim == "9")
+                    {
+                        AnaMenu();
+                    }
+                    else if (secim == "0")
+                    {
+                        Cikis();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Hatali secim yaptiniz. Ana menuye yonlendiriliyorsunuz");
+                        Console.ReadKey();
+                        AnaMenu();
+                    }
+                }
+                // ÇIKIŞ
+                static void Cikis()
+                {
+                    Console.WriteLine("Cikis yapiliyor");
+                    Console.WriteLine("Saglikli gunler dinleriz.");
+                }
 
             }
 
