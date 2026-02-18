@@ -92,7 +92,7 @@ namespace _260215_3_Bankamatik_Proje
             }
             else if (secim == "2")
             {
-                ParaYatir();
+                ParaYatirmaMenu();
             }
             else if (secim == "3")
             {
@@ -201,7 +201,53 @@ namespace _260215_3_Bankamatik_Proje
                 MenuSecenek();
 
                 //kendi hesabına para yatırma //ParaYatir();
+                static void ParaTransfer();
+                {
+                    Console.WriteLine("---Para transferleri---");
+                    Console.WriteLine("1 - Başka Hesaba EFT");
+                    Console.WriteLine("2 - Başka Hesaba Havale");
+                    Console.WriteLine("9 - Ana Menü");
+                    Console.WriteLine("0 - Çıkış");
+                    Console.WriteLine("İşleminiz nedir?");
+
+                    string secim = Console.ReadLine();
+                    if (secim == "1")
+                        if (secim == "1")
+                        {
+                            EFTYap();
+                        }
+                        else if (secim == "2")
+                        {
+                            HavaleYap();
+                        }
+                        else if (secim == "9")
+                        {
+                            AnaMenu();
+                        }
+                        else if (secim == "0")
+                        {
+                            Cikis();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Hatalı seçim!");
+                            Console.ReadKey();
+                            ParaTransfer();
+                        }
+
+                }
                 //para transfer menüsü //ParaTransfer();
+                static void ParaTransfer()
+                {
+                    Console.WriteLine("---Para Transferleri---");
+                    Console.WriteLine("2 - Başka Hesaba Havale");
+                    Console.WriteLine("9 - Ana Menü");
+                    Console.WriteLine("0 - Çıkış");
+                    Console.WriteLine("İşleminiz nedir?");
+
+                    
+                }
+
                 //Eğitim Ödemeleri //ARIZALI
                 static void EgitimOdemeleri()
                 {
