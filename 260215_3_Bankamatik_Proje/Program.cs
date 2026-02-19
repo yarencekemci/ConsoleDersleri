@@ -1,102 +1,82 @@
-﻿using System.Collections.Concurrent;
+﻿using System;
 
-namespace _260215_3_Bankamatik_Proje
+namespace ATM_Uygulamasi
 {
     internal class Program
     {
-        static decimal bakiye = 250; // Başlangıç Bakiyesi: 250 TL
+        static decimal bakiye = 250;
         static string sifre = "ab18";
         static int girisHakki = 3;
+
         static void Main(string[] args)
         {
-            //bakiye,sifre ve giris hakkı burada tanımalandığında hata veriyor diğer methodlar görmüyor
-            Baslangic();
+            GirisEkrani();
         }
-        //1 - Kartlı İşlem
-        //2 - Kartsız İşlem
-        static void Baslangic()
+
+        static void GirisEkrani()
         {
-            Console.WriteLine("HOSGELDİNİZ: KARTLI ISLEM İCİN 1'E BASINIZ. KARTSIZ İSLEM İCİN 2'YE BASINIZ.");
-            Console.Write("seciminiz:");
+            Console.WriteLine("---Hos geldiniz. Lutfen yapmak istediginiz islemi seciniz---");
+            Console.WriteLine("Kartli islem icin: 1");
+            Console.WriteLine("Kartsiz islem icin: 2");
 
             string secim = Console.ReadLine();
 
             if (secim == "1")
             {
-                Sifre();
-            }
-            else if (secim == "2")
-            {
-                Console.WriteLine("Kartsiz islem yapmak istiyorsanız QR kod okutabilirsiniz.");
-                Console.Read();
-                Baslangic();
+                SifreKontrol();
             }
             else
             {
-                Console.WriteLine("Hatali secim, Lütfen 1 veya 2'ye basiniz.");
-                Console.Read();
-                Baslangic();
+                Console.WriteLine("Kartsiz islem icin Ana sayfaya donup QR kod okutunuz.!");
             }
         }
-        /// <summary>
-        /// ŞİFRE
-        /// </summary>
-        static void Sifre()
-        {
-            Console.WriteLine("---Şifre---");
 
-            for (int i = 0; i <= 3; i++)
+        static void SifreKontrol()
+        {
+            while (girisHakki > 0)
             {
                 Console.Write("Sifre giriniz: ");
                 string girilenSifre = Console.ReadLine();
 
                 if (girilenSifre == sifre)
                 {
-                    Console.WriteLine("sifre dogru");
+                    AnaMenu();
                     return;
                 }
-                else if (i < 3)
-                    Console.WriteLine("yanlış!" + (3 - i));
                 else
                 {
-                    Console.WriteLine("3 kez yanlış giriş yapıldı!");
-
+                    girisHakki--;
+                    Console.WriteLine("Hatali sifre.! Kalan hak: " + girisHakki);
                 }
             }
+
+            Console.WriteLine("Deneme hakkiniz bitti. Sistem cikis yapiliyor.");
         }
-        /*
-        ANA MENÜ: 
-        1 - Para Çekme
-        2 - Para Yatırma
-        3 - Para Transferleri
-        4 - Eğitim Ödemeleri
-        5 - Ödemeler
-        6 - Bilgi Güncelleme
-        0 - Çıkış
-        */
+
         static void AnaMenu()
         {
-            Console.WriteLine("----Ana Menüye Hoş geldiniz---");
-            Console.WriteLine("Bakiye: " +bakiye);
-            Console.WriteLine("1- Para Çekme");
-            Console.WriteLine("2- Para Yatırma");
+            Console.WriteLine("--- ANA MENÜ ---");
+            Console.WriteLine("1 - Para Çekme");
+            Console.WriteLine("2 - Para Yatırma");
             Console.WriteLine("3 - Para Transferleri");
             Console.WriteLine("4 - Eğitim Ödemeleri");
             Console.WriteLine("5 - Ödemeler");
             Console.WriteLine("6 - Bilgi Güncelleme");
             Console.WriteLine("0 - Çıkış");
 
+            string secim = Console.ReadLine();
+
             if (secim == "1")
             {
-                ParaCek();
+                ParaCekme();
             }
             else if (secim == "2")
             {
-                ParaYatirmaMenu();
+                ParaYatirma();
             }
             else if (secim == "3")
             {
-                ParaTransfer();
+                ParaTransferleri();
             }
             else if (secim == "4")
             {
@@ -112,249 +92,211 @@ namespace _260215_3_Bankamatik_Proje
             }
             else if (secim == "0")
             {
-                Cikis(); //Menu Secenekleri 0-Çıkış 
+                return;
             }
             else
             {
-                Console.WriteLine("Hatali giris yaptiniz");
-
+                Console.WriteLine("Hatali secim! Lütfen kontrol ediniz.");
+                AnaMenu();
             }
-            static void ParaCek()
-            {
-                Console.WriteLine("para çekme işlemi");
-                Console.WriteLine("bakiye: " + bakiye);
-                Console.WriteLine("Çekmek istediğiniz tutar(Lütfen 5 ve 10'un katlarını giriniz:)");
+        }
 
-                decimal tutar = decimal.Parse(Console.ReadLine());
-                if (tutar > bakiye)
-                {
-                    Console.WriteLine("yetersiz bakiye!!!");
-                }
-                else
-                {
-                    bakiye = bakiye - tutar;
-                    Console.WriteLine("işlem başarılı. lütfen paranızı bölmeden aliniz.");
-                    Console.WriteLine("yeni bakiyeniz: " + bakiye + "TL");
-                }
+        static void ParaCekme()
+        {
+            Console.Write("Cekilecek tutar: ");
+            decimal tutar = Convert.ToDecimal(Console.ReadLine());
+
+            if (tutar <= bakiye)
+            {
+                bakiye -= tutar;
+                Console.WriteLine("Para cekildi. Yeni bakiyeniz: " + bakiye);
             }
-            static void ParaYatirmaMenu()
+            else
             {
-                Console.WriteLine("Para Yatırma");
-                Console.WriteLine("1- Kredi Karti");
-                Console.WriteLine("2- Kendi Hesaplarım arasında");
-                Console.WriteLine("9- Ana Menü");
-                Console.WriteLine("0- Çıkış");
-                Console.WriteLine("------");
-
-                string secim = Console.ReadLine();
-                if (secim == "1")
-                {
-                    KrediKartineYatir();
-                }
-                else if (secim == "2")
-                {
-                    KendiHesabinaYatir();
-                }
-                else if (secim == "9")
-                {
-                    AnaMenu();
-                }
-                else if (secim == "0")
-                {
-                    Cikis();
-                }
-                else
-                {
-                    Console.WriteLine("Hatali Secim");
-                    ParaYatirmaMenu();
-                }
+                Console.WriteLine("Yetersiz bakiye.");
             }
-            //kredi kartina para yatirma
-            static void KrediKartinaYatir()
-            {
-                Console.WriteLine("---Kredi Kartina Para Yatir");
-                Console.WriteLine("KArt numarası giriniz: (en az 12 hane)");
 
+            MenuDonus();
+        }
+
+        static void ParaYatirma()
+        {
+            Console.WriteLine("1 - Kredi Kartına");
+            Console.WriteLine("2 - Kendi Hesabına");
+
+            string secim = Console.ReadLine();
+
+            if (secim == "1")
+            {
+                Console.Write("Kart numarasi giriniz: ");
                 string kartNo = Console.ReadLine();
 
-                if (kartNo.Length < 12)
+                if (kartNo.Length >= 12)
                 {
-                    Console.WriteLine("12 haneden az kart numarası giremezsiniz. Geçersiz!"); //Geçersiz kart girişi yaptığında menüye dönsün
-                    Console.Write("---Menüye dönüyorsunuz---");
-                    MenuSecenek();
-                    return;
-                }
-                Console.Write("Yatırmak istediginiz tutar: ");
-                decimal tutar = decimal.Parse(Console.ReadLine());
+                    Console.Write("Yatirilacak tutar: ");
+                    decimal tutar = Convert.ToDecimal(Console.ReadLine());
 
-                if (tutar > bakiye)
-                {
-                    Console.WriteLine("Yetersiz bakiye!");
-
+                    if (tutar <= bakiye)
+                    {
+                        bakiye -= tutar;
+                        Console.WriteLine("İslem basarili.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Yetersiz bakiye.");
+                    }
                 }
                 else
                 {
-                    bakiye = bakiye - tutar;
-                    Console.WriteLine("Para çekme işlemi başarılı");
-                    Console.WriteLine("YENİ BAKİYENİZ: " + bakiye + "TL");
+                    Console.WriteLine("Gecersiz kart numarasi.");
                 }
-                MenuSecenek();
-
-                //kendi hesabına para yatırma //ParaYatir();
-                static void ParaTransfer();
-                {
-                    Console.WriteLine("---Para transferleri---");
-                    Console.WriteLine("1 - Başka Hesaba EFT");
-                    Console.WriteLine("2 - Başka Hesaba Havale");
-                    Console.WriteLine("9 - Ana Menü");
-                    Console.WriteLine("0 - Çıkış");
-                    Console.WriteLine("İşleminiz nedir?");
-
-                    string secim = Console.ReadLine();
-                    if (secim == "1")
-                        if (secim == "1")
-                        {
-                            EFTYap();
-                        }
-                        else if (secim == "2")
-                        {
-                            HavaleYap();
-                        }
-                        else if (secim == "9")
-                        {
-                            AnaMenu();
-                        }
-                        else if (secim == "0")
-                        {
-                            Cikis();
-                        }
-                        else
-                        {
-                            Console.WriteLine("Hatalı seçim!");
-                            Console.ReadKey();
-                            ParaTransfer();
-                        }
-
-                }
-                //para transfer menüsü //ParaTransfer();
-                static void ParaTransfer()
-                {
-                    Console.WriteLine("---Para Transferleri---");
-                    Console.WriteLine("2 - Başka Hesaba Havale");
-                    Console.WriteLine("9 - Ana Menü");
-                    Console.WriteLine("0 - Çıkış");
-                    Console.WriteLine("İşleminiz nedir?");
-
-                    
-                }
-
-                //Eğitim Ödemeleri //ARIZALI
-                static void EgitimOdemeleri()
-                {
-                    Console.WriteLine("--Eğitim Ödemeleri--");
-                    Console.WriteLine("Bu sayfa bakım asamasındadır.");
-
-                    MenuSecenek();
-                }
-                //ödemeler -Faturalar - OGS //Odemeler();
-                Console.WriteLine("ODEMELER");
-                Console.WriteLine("1 - Elektrik Faturası");
-                Console.WriteLine("2 - Telefon Faturası");
-                Console.WriteLine("3 - İnternet Faturası");
-                Console.WriteLine("4 - Su Faturası");
-                Console.WriteLine("5 - OGS Ödemeleri");
-                Console.WriteLine("9 - Ana Menü");
-                Console.WriteLine("0 - Çıkış");
-                Console.WriteLine("Lütfen yapmak istediginiz islemi seciniz.");
-
-                string secim = Console.ReadLine();
-
-
-                //bilgi güncelleme //BilgiGuncelleme();
-                static void BilgiGuncelleme()
-                {
-                    Console.WriteLine("---Bilgi Güncelleme İşlemi---");
-                    Console.WriteLine("1 - Şifre Değiştir");
-                    Console.WriteLine("9 - Ana Menü");
-                    Console.WriteLine("0 - Çıkış");
-                    Console.WriteLine("Lütfen yapmak istediginiz islemi seciniz");
-
-                    string secim = Console.ReadLine();
-
-                    if (secim == "1")
-                        SifreDegistir(); // şifre değiştirme işlemi ayrı bir method yazılacak
-                    else if (secim == "9")
-                        AnaMenu();
-                    else if (secim == "0")
-                        Cikis();
-                    else
-                    {
-                        Console.WriteLine("Hatali Secim. Tekrar yonlendiriliyorsunuz");
-                        BilgiGuncelleme();
-                    }
-
-                }
-                // SifreDegistir();
-                static void SifreDegistir()
-                {
-                    Console.WriteLine("Sifre Degistirme İslemi");
-                    Console.WriteLine("Mevcut Sifrenizi giriniz");
-
-                    string mevcutSifre = Console.ReadLine();
-
-                    if (mevcutSifre != sifre)
-                    { 
-                        Console.WriteLine("Yanlıs sifre");
-                        MenuSecenek();
-                        return;
-                    }
-                    Console.WriteLine("Yeni şifrenizi giriniz: ");
-                    string yeniSifre = Console.ReadLine();
-
-                    
-
-                    sifre = yeniSifre;
-                    Console.WriteLine("sifre degistirildi");
-                }
-
-
-                //MenuSecenek 9-Ana Menü 0-Çıkış işlemi
-                static void MenuSecenek()
-                {
-                    Console.WriteLine();
-                    Console.WriteLine("9 - Ana Menü");
-                    Console.WriteLine("0 - Çıkış İşlemleri");
-                    Console.Write("Seçiminiz");
-
-                    string secim = Console.ReadLine();
-
-                    if (secim == "9")
-                    {
-                        AnaMenu();
-                    }
-                    else if (secim == "0")
-                    {
-                        Cikis();
-                    }
-                    else
-                    {
-                        Console.WriteLine("Hatali secim yaptiniz. Ana menuye yonlendiriliyorsunuz");
-                        Console.ReadKey();
-                        AnaMenu();
-                    }
-                }
-                // ÇIKIŞ
-                static void Cikis()
-                {
-                    Console.WriteLine("Cikis yapiliyor");
-                    Console.WriteLine("Saglikli gunler dinleriz.");
-                }
-
+            }
+            else if (secim == "2")
+            {
+                Console.Write("Yatirilacak tutar: ");
+                decimal tutar = Convert.ToDecimal(Console.ReadLine());
+                bakiye += tutar;
+                Console.WriteLine("yeni bakiye: " + bakiye);
             }
 
-
-
+            MenuDonus();
         }
-        
+
+        static void ParaTransferleri()
+        {
+            Console.WriteLine("1 - EFT");
+            Console.WriteLine("2 - Havale");
+
+            string secim = Console.ReadLine();
+
+            if (secim == "1")
+            {
+                Console.Write("IBAN : ");
+                string iban = Console.ReadLine();
+
+                /*
+                 StartsWith() = başlangıcı kontrol eder
+                 EndsWith()	= sonu kontrol eder
+                 Contains()	= içeriyor mu bakar
+                 */
+                if (iban.StartsWith("TR") && iban.Length == 14) //TR ile başlayıp başlamadığını kontrol ettik
+                {
+                    Console.Write("Gonderilecek tutar: ");
+                    decimal tutar = Convert.ToDecimal(Console.ReadLine());
+
+                    if (tutar <= bakiye)
+                    {
+                        bakiye -= tutar;
+                        Console.WriteLine("EFT başarılı.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Yetersiz bakiye.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("gecersiz IBAN.");
+                }
+            }
+            else if (secim == "2")
+            {
+                Console.Write("Hesap numarası giriniz: ");
+                string hesapNo = Console.ReadLine();
+
+                if (hesapNo.Length == 11)
+                {
+                    Console.Write("Gonderilecek tutar: ");
+                    decimal tutar = Convert.ToDecimal(Console.ReadLine());
+
+                    if (tutar <= bakiye)
+                    {
+                        bakiye -= tutar;
+                        Console.WriteLine("Gonderim basarili.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Yetersiz bakiye.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Gecersiz hesap numarası.");
+                }
+            }
+
+            MenuDonus();
+        }
+
+        static void EgitimOdemeleri()
+        {
+            Console.WriteLine("Bu sayfa bakim asamasindadir. Anlayisiniz icin tesekkür ederiz");
+            MenuDonus();
+        }
+
+        static void Odemeler()
+        {
+            Console.Write("fatura tutari: ");
+            decimal tutar = Convert.ToDecimal(Console.ReadLine());
+
+            if (tutar <= bakiye)
+            {
+                bakiye -= tutar;
+                Console.WriteLine("Odeme yapildi.");
+            }
+            else
+            {
+                Console.WriteLine("Yetersiz bakiye.");
+            }
+
+            MenuDonus();
+        }
+
+        static void BilgiGuncelleme()
+        {
+            Console.Write("Mevcut Sifre: ");
+            string eski = Console.ReadLine();
+
+            if (eski == sifre)
+            {
+                Console.Write("Yeni sifre: ");
+                sifre = Console.ReadLine();
+                Console.WriteLine("Sifre guncellendi.");
+            }
+            else
+            {
+                Console.WriteLine("Sifre yanlis.");
+            }
+
+            MenuDonus();
+        }
+
+        static void MenuDonus()
+        {
+            Console.WriteLine("9 -Ana menu");
+            Console.WriteLine("0 -Cıkıs");
+
+            string secim = Console.ReadLine();
+
+            if (secim == "9")
+                AnaMenu();
+            else if (secim == "0")
+            {
+                Cikis();
+            }
+            else
+            { 
+                Console.WriteLine("Hatali secim yaptiniz. Ana menuye yonlendiriliyorsunuz"); 
+                Console.ReadKey(); 
+                AnaMenu(); 
+            }
+        }
+
+        static void Cikis()
+        {
+            Console.WriteLine("Cikis yapiliyor...");
+            Environment.Exit(0);
+        }
     }
 }
+
