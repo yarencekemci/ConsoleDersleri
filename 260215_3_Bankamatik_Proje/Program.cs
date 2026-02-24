@@ -212,7 +212,7 @@ namespace ATM_Uygulamasi
                     if (tutar <= bakiye)
                     {
                         bakiye -= tutar;
-                        Console.WriteLine("Gonderim basarili.");
+                        Console.WriteLine("Gonderim basarili. ve gönderilen Tutar:{0} ve bakiyeniz:{1}",tutar.ToString("N"),bakiye.ToString("N"));
                     }
                     else
                     {
