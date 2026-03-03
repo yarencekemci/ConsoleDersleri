@@ -60,5 +60,26 @@ from orders o group by CustomerID
 --YAREN
 
 --1)Her bir üründen kaç tane satıldığını ürün adı , birim fiyatı , kalan stok şeklinde gösteriniz
+select
+ProductName as urunadi,
+UnitPrice AS BirimFiyat,
+UnitsInStock AS KalanStok,
+(
+select SUM(Quantity)
+        from [Order Details]
+        where [Order Details].ProductID = Products.ProductID
+) AS SatilanAdet
+from Products;
+
 --2)her bir siparişte kaç ürün olduğunu getiren scripti kodlayınız
+
+select
+OrderID,
+( 
+select SUM(Quantity)
+from [Order Details]
+where [Order Details].OrderID = Orders.OrderID
+) as siparistekiurunadedi
+from orders;
+
 --3)her bir müşterinin aldığı ürün sayısı Firmaadı, Firma yetkili ad-soyad, şehir ve ülke şeklinde hesaplayınız
