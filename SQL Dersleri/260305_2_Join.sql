@@ -23,4 +23,8 @@ group by b.BolumlerID,b.BolumAdi
 order by BolumlerID
 
 --ÖDEVLER
-
+--1)hangi öğrencilerin sınıf ataması olmamıştır
+--2)Hangi sınıflara hanüz kayıt yapılamıştır
+--3)her bir öğrencinin aldığı ders sayısı
+--4)her bir velinin iletişimde olduğu öğrencisinin Sınıf öğretmerni bilgisi veli bilgi , öğrenci bilgisi veren script
+--5)en çok izin yapan 10 öğrencilerin bilgisi  ve öğrencilerin veli bilgisi listesini veriniz
