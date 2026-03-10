@@ -23,6 +23,7 @@ group by b.BolumlerID,b.BolumAdi
 order by BolumlerID
 
 --ÖDEVLER
+use OkulDB
 --1)hangi öğrencilerin sınıf ataması olmamıştır
 select o.OgrencilerID,o.OgrenciAdi,o.OgrenciSoyadi,o.SinifID from ogrenciler as o
 left join Sınıflar as s on o.SinifID=s.SınıflarID
@@ -49,6 +50,7 @@ group by o.ogrencilerID,o.OgrenciAdi,o.OgrenciSoyadi
 order by aldigiDersSayisi desc
 
 --4)her bir velinin iletişimde olduğu öğrencisinin Sınıf öğretmerni bilgisi veli bilgi , öğrenci bilgisi veren script
+select * from veliler
 select
 v.VelilerID,
 v.VeliAdi,
@@ -63,10 +65,7 @@ og.OgretmenSoyadi
 from veliler as v
 inner join OgrenciVeli ov on ov.VeliID=v.VelilerID
 inner join ogrenciler o on o.OgrencilerID=ov.OgrenciID
-left join Sınıflar s on s.SınıflarID=o.SinifID 
+join Sınıflar s on s.SınıflarID=o.SinifID 
 left join Ogretmenler og on og.OgretmenlerID=s.OgretmenID 
 order by v.VelilerID , o.OgrenciSoyadi
-
---5)en çok izin yapan 10 öğrencilerin bilgisi  ve öğrencilerin veli bilgisi listesini veriniz
-
 
