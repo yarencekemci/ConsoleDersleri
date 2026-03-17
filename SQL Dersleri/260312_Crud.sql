@@ -1,4 +1,4 @@
---- 21 mart perşembe
+--- 21 şubat perşembe
 -- CRUD-> Create, Read, Update, Delete
 -- DML - Data Manipulation Language
 --Crud - Create(İnsert) , Read(List-Select), Update(Update), Delete(Delete)
