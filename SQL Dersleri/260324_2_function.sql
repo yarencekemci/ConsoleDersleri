@@ -57,7 +57,7 @@ create function fnc_ProductName
 returns nvarchar(250)
 as
 begin
-return(select ProductName from Products where ProductID=productId)
+return(select ProductName from Products where ProductID=@productId)
 end
 go
 select dbo.fnc_ProductName(11)
@@ -66,3 +66,25 @@ OrderID,ProductID,
 dbo.fnc_ProductName(ProductId) as 'Product Name',
 UnitPrice, dbo.fnc_Zam(15,UnitPrice) as 'Zam %15'
 from [Order Details]
+
+--her bir sipariş için order details tablosunda ürün satış bilgilerini 
+--OrderId,ProductID,ProductName, Quantity getiren sipariş tarihini(order date) getiren yapıyı
+--fnc_GetOrderDate adında function içinde kodlayınız
+select * from [Order Details]
+select OrderId,ProductID,Quantity from dbo.[Order Details] 
+select OrderDate from Orders where orderId=10248
+go
+create function fnc_GetOrderDate
+(
+@OrderID int
+)
+returns dateTime 
+as
+begin
+return(select OrderDate from Orders where orderId=@OrderID)
+end
+go
+select dbo.fnc_GetOrderDate(10248)
+select dbo.fnc_GetOrderDate(10253)
+
+select OrderId,ProductID,Quantity from dbo.[Order Details] 
