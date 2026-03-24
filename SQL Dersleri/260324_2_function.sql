@@ -44,3 +44,25 @@ dbo.fnc_Zam(10,UnitPrice) as 'Zam %10',
 dbo.fnc_Zam(25,UnitPrice) as 'Zam %25'
 from Products
 
+--
+
+select * from  [Order Details]
+select UnitPrice,UnitsInStock from Products where ProductID=11
+select ProductName from Products where ProductID=11
+go
+create function fnc_ProductName
+(
+@productId int
+)
+returns nvarchar(250)
+as
+begin
+return(select ProductName from Products where ProductID=productId)
+end
+go
+select dbo.fnc_ProductName(11)
+select
+OrderID,ProductID,
+dbo.fnc_ProductName(ProductId) as 'Product Name',
+UnitPrice, dbo.fnc_Zam(15,UnitPrice) as 'Zam %15'
+from [Order Details]
