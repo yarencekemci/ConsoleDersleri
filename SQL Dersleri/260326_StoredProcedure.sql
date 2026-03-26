@@ -1,0 +1,2 @@
+-- 26 mart 2026 sql dersleri
+-- stored procedure
